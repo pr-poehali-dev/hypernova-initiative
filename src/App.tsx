@@ -356,24 +356,68 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="py-12 px-6 border-t border-border">
+      <footer className="py-16 px-6 border-t border-border">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col items-center gap-6">
-            <img
-              src="https://cdn.poehali.dev/projects/667844ee-f8a7-48db-b13f-990c70020940/bucket/9b1c645e-fe50-4380-96c0-5f6b43c4bf24.png"
-              alt="Гарант Крым"
-              className="w-16 h-16 object-contain"
-            />
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-px bg-primary" />
+          {/* Top: logo + contacts */}
+          <div className="grid md:grid-cols-3 gap-12 mb-12">
+            {/* Brand */}
+            <div className="flex flex-col items-start gap-4">
+              <img
+                src="https://cdn.poehali.dev/projects/667844ee-f8a7-48db-b13f-990c70020940/bucket/9b1c645e-fe50-4380-96c0-5f6b43c4bf24.png"
+                alt="Гарант Крым"
+                className="w-16 h-16 object-contain"
+              />
               <span className="font-serif text-xl text-foreground">Гарант Крым</span>
-              <div className="w-12 h-px bg-primary" />
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Агентство недвижимости и юридической защиты в Крыму
+              </p>
             </div>
-            <p className="text-center text-sm text-muted-foreground max-w-md">
-              Агентство недвижимости и юридической защиты в Крыму
-            </p>
+
+            {/* Contacts */}
+            <div className="space-y-4">
+              <p className="text-primary tracking-[0.2em] uppercase text-xs mb-5">Контакты</p>
+              <div className="flex items-start gap-3">
+                <div className="shrink-0 mt-0.5 w-1.5 h-1.5 rotate-45 bg-primary/70 mt-2" />
+                <div>
+                  <a href="tel:+79786592880" className="text-foreground hover:text-primary transition-colors">+7 978 659-28-80</a>
+                  <br />
+                  <a href="tel:+79064336210" className="text-foreground hover:text-primary transition-colors">+7 906 433-62-10</a>
+                </div>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="shrink-0 w-1.5 h-1.5 rotate-45 bg-primary/70 mt-2" />
+                <a href="mailto:artem-gontar@bk.ru" className="text-muted-foreground hover:text-primary transition-colors">artem-gontar@bk.ru</a>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="shrink-0 w-1.5 h-1.5 rotate-45 bg-primary/70 mt-2" />
+                <span className="text-muted-foreground">8:00 — 20:00, ежедневно</span>
+              </div>
+            </div>
+
+            {/* Address */}
+            <div className="space-y-4">
+              <p className="text-primary tracking-[0.2em] uppercase text-xs mb-5">Адрес</p>
+              <div className="flex items-start gap-3">
+                <div className="shrink-0 w-1.5 h-1.5 rotate-45 bg-primary/70 mt-2" />
+                <span className="text-muted-foreground leading-relaxed">г. Ялта, набережная Ленина, 1</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="shrink-0 w-1.5 h-1.5 rotate-45 bg-primary/70 mt-2" />
+                <span className="text-muted-foreground leading-relaxed">г. Ялта, ул. Московская, 47</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Divider */}
+          <div className="w-full h-px bg-border/40 mb-8" />
+
+          {/* Legal */}
+          <div className="flex flex-col md:flex-row justify-between gap-4">
             <p className="text-xs text-muted-foreground/60">
               © 2024 Гарант Крым. Все права защищены.
+            </p>
+            <p className="text-xs text-muted-foreground/40">
+              ИП Гонтарь А.С. · ИНН 910318426169 · ОГРНИП 324911200021720
             </p>
           </div>
         </div>
