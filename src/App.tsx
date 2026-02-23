@@ -19,7 +19,7 @@ function App() {
             </div>
           </div>
 
-          <p className="text-primary tracking-[0.3em] uppercase text-sm mb-6">С 2014 года в Крыму</p>
+          <p className="text-primary tracking-[0.3em] uppercase text-sm mb-6">Более 15 лет на рынке</p>
 
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-tight">
             <span className="text-gold-gradient">Гарант</span> Крым
