@@ -282,23 +282,40 @@ function App() {
 
       {/* Testimonial Section */}
       <section className="py-24 px-6">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <ArtDecoDivider variant="fan" />
 
-          <div className="relative text-center py-12">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 text-primary/20 font-serif text-9xl leading-none">
-              &ldquo;
-            </div>
-
-            <blockquote className="relative z-10">
-              <p className="font-serif text-2xl md:text-3xl text-foreground leading-relaxed italic mb-8">
-                Продавали квартиру через Гарант Крым — всё прошло быстро и без единой проблемы. Юристы проверили каждый документ, сделка прошла чисто. Рекомендую всем, кто хочет надёжности.
-              </p>
-              <footer className="text-muted-foreground">
-                <span className="text-primary">—</span> Клиент агентства,{" "}
-                <span className="text-primary">Симферополь</span>
-              </footer>
-            </blockquote>
+          <div className="grid md:grid-cols-3 gap-8 mt-16">
+            {[
+              {
+                text: "Продавали квартиру через Гарант Крым — всё прошло быстро и без единой проблемы. Юристы проверили каждый документ, сделка прошла чисто. Рекомендую всем, кто хочет надёжности.",
+                author: "Клиент агентства",
+                city: "Симферополь",
+              },
+              {
+                text: "Обратился за помощью в оформлении наследства на дом — запутанная ситуация, несколько наследников. Юрист разобрался за месяц, всё зарегистрировали без суда. Спасибо за профессионализм!",
+                author: "Владелец недвижимости",
+                city: "Ялта",
+              },
+              {
+                text: "Помогли оспорить кадастровую стоимость участка — снизили почти вдвое. Представитель грамотно всё оформил и защитил интересы в суде. Теперь плачу налог вдвое меньше.",
+                author: "Собственник участка",
+                city: "Севастополь",
+              },
+            ].map((review) => (
+              <div key={review.city} className="relative p-8 border border-border/40 bg-card/20">
+                <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-primary" />
+                <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-primary" />
+                <div className="text-primary/30 font-serif text-6xl leading-none mb-4">&ldquo;</div>
+                <p className="font-serif text-lg text-foreground leading-relaxed italic mb-6">
+                  {review.text}
+                </p>
+                <footer className="text-muted-foreground text-sm">
+                  <span className="text-primary">—</span> {review.author},{" "}
+                  <span className="text-primary">{review.city}</span>
+                </footer>
+              </div>
+            ))}
           </div>
         </div>
       </section>
