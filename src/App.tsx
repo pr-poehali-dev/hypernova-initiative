@@ -82,74 +82,133 @@ function App() {
             <h2 className="font-serif text-4xl md:text-5xl text-foreground text-balance">Полный спектр услуг</h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <ServiceCard
-              title="Купля-продажа недвижимости"
-              description="Подбор объектов, проверка юридической чистоты, сопровождение сделки под ключ. Жильё, коммерция, земля — весь рынок Крыма."
-              icon={
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-12 h-12">
-                  <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H4a1 1 0 01-1-1V9.5z" />
-                  <path d="M9 21V12h6v9" />
-                </svg>
-              }
-            />
-            <ServiceCard
-              title="Аренда и управление"
-              description="Долгосрочная и посуточная аренда, управление объектами. Помогаем собственникам получать стабильный доход без лишних хлопот."
-              icon={
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-12 h-12">
-                  <rect x="2" y="7" width="20" height="14" rx="2" />
-                  <path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2" />
-                  <line x1="12" y1="12" x2="12" y2="16" />
-                  <line x1="10" y1="14" x2="14" y2="14" />
-                </svg>
-              }
-            />
-            <ServiceCard
-              title="Юридическое сопровождение"
-              description="Регистрация прав, оформление наследства, разрешение споров. Защищаем ваши интересы в любых правовых вопросах с недвижимостью."
-              icon={
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-12 h-12">
-                  <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7L12 2z" />
-                  <path d="M9 12l2 2 4-4" />
-                </svg>
-              }
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Ecology Services Section */}
-      <section className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <p className="text-primary tracking-[0.2em] uppercase text-sm mb-4">Экология и природопользование</p>
-            <h2 className="font-serif text-4xl md:text-5xl text-foreground text-balance">Экологическое сопровождение</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             {[
-              "Инженерно-экологические изыскания",
-              "Гидрометеорологические изыскания",
-              "Разработка разделов проекта ОВОС",
-              "Разработка рабочих технологических карт (РТК) и проектов производства работ (ППР)",
-              "Разработка проектов мероприятий по охране окружающей природной среды (ПМООС)",
-              "Получение решений на пользование водным объектом в части сброса и забора вод",
-              "Разработка нормативов допустимых сбросов (НДС)",
-              "Проведение инвентаризации источников выбросов загрязняющих веществ в атмосферу",
-              "Разработка проектов предельно допустимых выбросов (ПДВ)",
-              "Инвентаризация и паспортизация отходов производства и потребления",
-              "Постановка на государственный учёт объектов НВОС",
-              "Разработка и согласование ПНООЛР",
-              "Разработка плана ликвидации аварийного розлива нефти (ПЛАРН)",
-              "Разработка проекта санитарно-защитной зоны предприятий (СЗЗ)",
-              "Разработка паспортов газоочистных установок (ГОУ)",
-              "Услуги по комплексному экологическому сопровождению предприятия",
-              "Разработка мероприятий по уменьшению выбросов в периоды неблагоприятных метеорологических условий",
-            ].map((service) => (
-              <div key={service} className="relative p-5 border border-border/40 bg-card/20 flex items-start gap-4 group hover:border-primary/40 transition-colors duration-300">
-                <div className="shrink-0 mt-0.5 w-4 h-4 rotate-45 border border-primary/60 group-hover:bg-primary/20 transition-colors duration-300" />
-                <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300 text-sm leading-relaxed">{service}</span>
+              {
+                title: "Регистрация и кадастр",
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8 text-primary">
+                    <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                    <path d="M9 12h6M9 16h4" />
+                  </svg>
+                ),
+                items: [
+                  "Регистрация права на квартиру",
+                  "Регистрация права на частный дом",
+                  "Регистрация права на земельный участок",
+                  "Постановка объектов на кадастровый учёт",
+                  "Приватизация и регистрация квартир",
+                  "Присвоение адреса объекта недвижимости",
+                  "Подготовка технических планов зданий и помещений",
+                  "Подготовка технических планов для аренды по частям",
+                  "Гаражная и дачная амнистия от 100 000 руб.",
+                  "Перевод садового дома в статус жилого",
+                ],
+              },
+              {
+                title: "Геодезия и межевание",
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8 text-primary">
+                    <path d="M3 3l18 18M3 21L21 3" />
+                    <circle cx="12" cy="12" r="3" />
+                    <path d="M12 3v3M12 18v3M3 12h3M18 12h3" />
+                  </svg>
+                ),
+                items: [
+                  "Топографическая съёмка участков",
+                  "Вынос границ участка в натуру",
+                  "Межевание участков (план на диске и бумаге)",
+                  "Межевой план для объединения участков",
+                  "Уточнение границ, площади и местоположения",
+                  "Раздел земельного участка по частям",
+                  "Прирезка земельных участков",
+                  "Разбивка осей здания и геодезическая основа (ГРО)",
+                  "Геодезические съёмки в строительстве",
+                  "Инженерно-геодезические изыскания для строительства",
+                  "Обмерные работы при обследовании зданий",
+                  "Восстановление утраченных межевых знаков",
+                  "Заключение кадастрового инженера для исправления ошибок",
+                ],
+              },
+              {
+                title: "Юридические услуги",
+                icon: (
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-8 h-8 text-primary">
+                    <path d="M12 2L3 7v5c0 5.25 3.75 10.15 9 11.25C17.25 22.15 21 17.25 21 12V7L12 2z" />
+                    <path d="M9 12l2 2 4-4" />
+                  </svg>
+                ),
+                items: [
+                  "Регистрация договора купли-продажи",
+                  "Регистрация договора дарения",
+                  "Регистрация договора аренды",
+                  "Регистрация права на наследство",
+                  "Юридическое представительство в суде",
+                  "Раздел недвижимости в суде и досудебный порядок",
+                  "Независимая кадастровая оценка участков",
+                  "Независимая оценка недвижимости для суда",
+                  "Проверка участка перед покупкой",
+                  "Изменение вида разрешённого использования участка",
+                  "Внесение изменений в Правила застройки и землепользования",
+                  "МинЖил политики и ГосСтройнадзор",
+                ],
+              },
+            ].map((category) => (
+              <div key={category.title} className="relative border border-border/60 bg-background p-7">
+                <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-primary" />
+                <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-primary" />
+                <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-primary" />
+                <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-primary" />
+                <div className="mb-5">{category.icon}</div>
+                <h3 className="font-serif text-xl text-foreground mb-6">{category.title}</h3>
+                <ul className="space-y-3">
+                  {category.items.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <div className="shrink-0 mt-1.5 w-1.5 h-1.5 rotate-45 bg-primary/70" />
+                      <span className="text-muted-foreground text-sm leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Additional services */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                title: "Проектирование и согласование",
+                items: [
+                  "Получение техусловий для подключения газа, водоснабжения и водоотведения",
+                  "Разработка проектов строительства загородных домов",
+                  "Разработка архитектурных проектов коммерческих объектов",
+                  "Разработка проекта при согласовании перепланировки помещений",
+                  "Согласование перепланировки — проект, экспликация, техплан",
+                  "Составление поэтажных планов на основании контура здания",
+                ],
+              },
+              {
+                title: "Экология и природопользование",
+                items: [
+                  "Инженерно-экологические и гидрометеорологические изыскания",
+                  "Разработка ОВОС, ПМООС, ПДВ, НДС, ПЛАРН",
+                  "Разработка проекта санитарно-защитной зоны (СЗЗ)",
+                  "Инвентаризация источников выбросов и паспортизация отходов",
+                  "Постановка на учёт объектов НВОС, разработка ПНООЛР",
+                  "Комплексное экологическое сопровождение предприятия",
+                ],
+              },
+            ].map((block) => (
+              <div key={block.title} className="border border-border/40 bg-card/20 p-7">
+                <h3 className="font-serif text-lg text-primary mb-5">{block.title}</h3>
+                <ul className="space-y-3">
+                  {block.items.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <div className="shrink-0 mt-1.5 w-1.5 h-1.5 rotate-45 bg-primary/70" />
+                      <span className="text-muted-foreground text-sm leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
