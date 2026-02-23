@@ -19,6 +19,14 @@ function App() {
             </div>
           </div>
 
+          <div className="flex justify-center mb-6">
+            <img
+              src="https://cdn.poehali.dev/projects/667844ee-f8a7-48db-b13f-990c70020940/bucket/9b1c645e-fe50-4380-96c0-5f6b43c4bf24.png"
+              alt="Гарант Крым"
+              className="w-28 h-28 object-contain"
+            />
+          </div>
+
           <p className="text-primary tracking-[0.3em] uppercase text-sm mb-6">Более 15 лет на рынке</p>
 
           <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl text-foreground mb-6 leading-tight">
@@ -351,6 +359,11 @@ function App() {
       <footer className="py-12 px-6 border-t border-border">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center gap-6">
+            <img
+              src="https://cdn.poehali.dev/projects/667844ee-f8a7-48db-b13f-990c70020940/bucket/9b1c645e-fe50-4380-96c0-5f6b43c4bf24.png"
+              alt="Гарант Крым"
+              className="w-16 h-16 object-contain"
+            />
             <div className="flex items-center gap-4">
               <div className="w-12 h-px bg-primary" />
               <span className="font-serif text-xl text-foreground">Гарант Крым</span>
