@@ -119,6 +119,43 @@ function App() {
         </div>
       </section>
 
+      {/* Ecology Services Section */}
+      <section className="py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="text-primary tracking-[0.2em] uppercase text-sm mb-4">Экология и природопользование</p>
+            <h2 className="font-serif text-4xl md:text-5xl text-foreground text-balance">Экологическое сопровождение</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              "Инженерно-экологические изыскания",
+              "Гидрометеорологические изыскания",
+              "Разработка разделов проекта ОВОС",
+              "Разработка рабочих технологических карт (РТК) и проектов производства работ (ППР)",
+              "Разработка проектов мероприятий по охране окружающей природной среды (ПМООС)",
+              "Получение решений на пользование водным объектом в части сброса и забора вод",
+              "Разработка нормативов допустимых сбросов (НДС)",
+              "Проведение инвентаризации источников выбросов загрязняющих веществ в атмосферу",
+              "Разработка проектов предельно допустимых выбросов (ПДВ)",
+              "Инвентаризация и паспортизация отходов производства и потребления",
+              "Постановка на государственный учёт объектов НВОС",
+              "Разработка и согласование ПНООЛР",
+              "Разработка плана ликвидации аварийного розлива нефти (ПЛАРН)",
+              "Разработка проекта санитарно-защитной зоны предприятий (СЗЗ)",
+              "Разработка паспортов газоочистных установок (ГОУ)",
+              "Услуги по комплексному экологическому сопровождению предприятия",
+              "Разработка мероприятий по уменьшению выбросов в периоды неблагоприятных метеорологических условий",
+            ].map((service) => (
+              <div key={service} className="relative p-5 border border-border/40 bg-card/20 flex items-start gap-4 group hover:border-primary/40 transition-colors duration-300">
+                <div className="shrink-0 mt-0.5 w-4 h-4 rotate-45 border border-primary/60 group-hover:bg-primary/20 transition-colors duration-300" />
+                <span className="text-muted-foreground group-hover:text-foreground transition-colors duration-300 text-sm leading-relaxed">{service}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Comparison Section */}
       <section className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
