@@ -119,6 +119,71 @@ function App() {
         </div>
       </section>
 
+      {/* Comparison Section */}
+      <section className="py-24 px-6">
+        <div className="max-w-6xl mx-auto">
+          <ArtDecoDivider variant="stepped" />
+          <div className="text-center mb-16">
+            <p className="text-primary tracking-[0.2em] uppercase text-sm mb-4">Ваш выбор</p>
+            <h2 className="font-serif text-4xl md:text-5xl text-foreground text-balance">Решать вам</h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Самостоятельно */}
+            <div className="relative p-8 border border-border/40 bg-card/30">
+              <div className="absolute -top-2 -left-2 w-6 h-6 border-t border-l border-border/40" />
+              <div className="absolute -top-2 -right-2 w-6 h-6 border-t border-r border-border/40" />
+              <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b border-l border-border/40" />
+              <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b border-r border-border/40" />
+              <h3 className="font-serif text-2xl text-muted-foreground mb-8 text-center">Действовать самостоятельно</h3>
+              <ul className="space-y-5">
+                {[
+                  "Потратить много времени для изучения законодательной базы и разобраться в документах",
+                  "Самому выработать стратегию и определить последовательность действий",
+                  "Неверно поданные заявления и обращения могут привести к отрицательному результату",
+                  "Риск заключить договор с неквалифицированным исполнителем или фирмой-однодневкой",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-4">
+                    <span className="mt-1 shrink-0 w-5 h-5 rounded-full border border-muted-foreground/30 flex items-center justify-center">
+                      <svg viewBox="0 0 12 12" className="w-3 h-3 text-muted-foreground/50" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M2 2l8 8M10 2l-8 8" />
+                      </svg>
+                    </span>
+                    <span className="text-muted-foreground leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* К юристу */}
+            <div className="relative p-8 border border-primary/40 bg-card/50">
+              <div className="absolute -top-2 -left-2 w-6 h-6 border-t-2 border-l-2 border-primary" />
+              <div className="absolute -top-2 -right-2 w-6 h-6 border-t-2 border-r-2 border-primary" />
+              <div className="absolute -bottom-2 -left-2 w-6 h-6 border-b-2 border-l-2 border-primary" />
+              <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b-2 border-r-2 border-primary" />
+              <h3 className="font-serif text-2xl text-primary mb-8 text-center">Обратиться к земельному юристу</h3>
+              <ul className="space-y-5">
+                {[
+                  "Юрист отлично разбирается в земельном законодательстве и знает как его применить",
+                  "Юрист предложит вам наиболее оптимальный вариант решения вашего вопроса",
+                  "Юрист имеет практику по схожей ситуации, знает какие документы и куда нужно подать",
+                  "Юрист сотрудничает с проверенными кадастровыми инженерами и проектировщиками",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-4">
+                    <span className="mt-1 shrink-0 w-5 h-5 rounded-full border border-primary/60 flex items-center justify-center">
+                      <svg viewBox="0 0 12 12" className="w-3 h-3 text-primary" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <path d="M2 6l3 3 5-5" />
+                      </svg>
+                    </span>
+                    <span className="text-foreground leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonial Section */}
       <section className="py-24 px-6">
         <div className="max-w-4xl mx-auto">
